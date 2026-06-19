@@ -1,0 +1,27 @@
+{
+  "name": "whitebox-auth-auth0",
+  "version": "0.1.0",
+  "description": "Auth0 (and generic OIDC) MCP auth verifier for WhiteBox — validates JWT access tokens against the provider's JWKS and advertises OAuth discovery. Composed into config.mcp.auth.",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/almero-digital-marketing/whitebox-auth-auth0.git"
+  },
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": ["src", "README.md"],
+  "sideEffects": false,
+  "scripts": { "test": "vitest run" },
+  "dependencies": {
+    "jose": "^5.9.0"
+  },
+  "peerDependencies": {
+    "whitebox-server": "^2.0.0"
+  },
+  "devDependencies": {
+    "vitest": "^2.0.0"
+  }
+}
