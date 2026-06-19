@@ -4,10 +4,10 @@
 // Bearer JWT against the provider's JWKS (signature + issuer + audience + expiry)
 // and advertises the authorization server for discovery. Compose it into config:
 //
-//   import { auth0 } from 'whitebox-auth-auth0'
+//   import { auth0 } from 'whitebox-pro-auth-auth0'
 //   mcp: { auth: auth0({ domain: 'YOUR.auth0.com', audience: 'https://whitebox/mcp', scope: 'mcp:use' }) }
 //
-// Implements the WhiteBox auth-verifier contract (whitebox-server/auth):
+// Implements the WhiteBox auth-verifier contract (whitebox-pro-server/auth):
 //   { middleware, authorizationServers, resource?, scopesSupported }
 
 import { createRemoteJWKSet, jwtVerify } from 'jose'

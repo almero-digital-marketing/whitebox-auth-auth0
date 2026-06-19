@@ -1,4 +1,4 @@
-# whitebox-auth-auth0
+# whitebox-pro-auth-auth0
 
 Auth0 (and generic OIDC) **MCP auth verifier** for WhiteBox. Makes `/mcp` an
 OAuth 2.1 Resource Server: it validates the incoming Bearer JWT against the
@@ -6,7 +6,7 @@ provider's JWKS and advertises the authorization server so MCP clients can run
 the login flow themselves.
 
 ```js
-import { auth0 } from 'whitebox-auth-auth0'
+import { auth0 } from 'whitebox-pro-auth-auth0'
 
 // whitebox.config.js
 mcp: {
@@ -20,7 +20,7 @@ mcp: {
 ```
 
 It returns a verifier `{ middleware, authorizationServers, resource?, scopesSupported }`
-— the contract `whitebox-server`'s `resolveMcpAuth` understands. The core then:
+— the contract `whitebox-pro-server`'s `resolveMcpAuth` understands. The core then:
 
 - gates `/mcp` with the JWT-validating middleware, and
 - serves `/.well-known/oauth-protected-resource` (RFC 9728) pointing at Auth0,
